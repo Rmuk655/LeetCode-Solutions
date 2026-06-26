@@ -20,16 +20,13 @@ public:
     }
 
     long long maximumTotalDamage(vector<int>& power) {
-        int n = power.size();
-        if(n == 1){
-            return power[0];
-        }
         sort(power.begin(), power.end());
         for (int x : power) {
             if (val.empty() || val.back() != x) {
                 val.push_back(x);
                 sum.push_back(x);
-            } else {
+            } 
+            else {
                 sum.back() += x;
             }
         }
