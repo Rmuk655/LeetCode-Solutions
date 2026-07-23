@@ -1,9 +1,6 @@
 class Solution {
 public:
     bool bfs(int i, vector<vector<int>>& graph, vector<int> &visited){
-        // if(visited[i] != -1){
-        //     return true;
-        // }
         visited[i] = 0;
         queue<int> q;
         q.push(i);
