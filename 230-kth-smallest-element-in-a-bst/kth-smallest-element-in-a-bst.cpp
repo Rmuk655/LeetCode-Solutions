@@ -15,25 +15,9 @@ public:
         if(Node == nullptr){
             return ;
         }
-        else if(Node->left == nullptr && Node->right == nullptr){
-            vec.push_back(Node->val);
-            return;
-        }
-        // TreeNode* prev;
-        // while(Node != nullptr && Node->left != nullptr){
-        //     prev = Node;
-        //     Node = Node->left;
-        // }
         inorder(Node->left, vec);
         vec.push_back(Node->val);
         inorder(Node->right, vec);
-        // if(Node->left != nullptr){
-        //     vec.push_back(Node->left->val);
-        // }
-        // vec.push_back(Node->val);
-        // if(Node->right != nullptr){
-        //     vec.push_back(Node->right->val);
-        // }
         return;
     }
     int kthSmallest(TreeNode* root, int k) {
